@@ -4,7 +4,7 @@ on:
   push:
     branches: ["labwork4_467771"]
   pull_request:
-    branches: ["labwork4_467771"]
+    branches: ["labwork4_467771"] 
   workflow_dispatch:
 
 jobs:
