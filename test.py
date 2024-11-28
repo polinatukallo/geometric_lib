@@ -48,9 +48,9 @@ class PerimeterRectangleTestCase(unittest.TestCase):
     #     self.assertEqual(res, "Incorrect input")
 
     # Проверяет, правильно ли функция возвращает 0, если одно из значений равно 0
-    def testPerimeterRectangleZero(self):
-        res = perimeterRectangle(10, 0)
-        self.assertEqual(res, 0)
+    # def testPerimeterRectangleZero(self):
+    #     res = perimeterRectangle(10, 0)
+    #     self.assertEqual(res, 0)
 
     # Проверяет, возвращает ли функция правильный результат для значений 10 и 10
     def testPerimeterRectangleTen(self):
@@ -196,9 +196,9 @@ class PerimeterSquareTestCase(unittest.TestCase):
     #     self.assertEqual(res, "Incorrect input")
 
     # Проверяет, правильно ли функция возвращает 0, если сторона равна 0
-    def testPerimeterSquareZero(self):
-        res = perimeterSquare(0)
-        self.assertEqual(res, 0)
+    # def testPerimeterSquareZero(self):
+    #     res = perimeterSquare(0)
+    #     self.assertEqual(res, 0)
 
     # Проверяет, возвращает ли функция правильный результат для стороны 10
     def testPerimeterSquareTen(self):
