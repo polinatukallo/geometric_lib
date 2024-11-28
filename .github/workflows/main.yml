@@ -13,12 +13,14 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
+        python-version: [3.8, 3.12]
+      fail-fast: false
 
     steps:
       - name: Check out Repository
         uses: actions/checkout@v4
 
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
@@ -26,25 +28,8 @@ jobs:
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
 
-      - name: Set up Python
-        uses: actions/setup-python@v4.7.1
-        with:
-          python-version: 3.8
-
-      - name: Run My Step
-        id: myStep
-        run: echo "::set-output name=myOutput::some value"
-
-      - name: Set Output Variable
-        run: echo "myOutput=${{ steps.myStep.outputs.myOutput }}" >> $GITHUB_ENV
-
       - name: Install Dependencies
-        run: |
-          echo "There are no dependencies!"
-      - name: Run Unit Tests
-        run: |
-          python -m unittest discover -s ./tests -p "test_*.py"
+        run: echo "There are no dependencies!"
 
-      # Запуск unit тестов
-      - name: Run unit tests
-        run: python -m unittest test
+      - name: Run Unit Tests
+        run: python -m unittest discover -s ./tests -p "test_*.py"
