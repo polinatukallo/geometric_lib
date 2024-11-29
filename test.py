@@ -6,9 +6,9 @@ import math
 
 class AreaRectangleTestCase(unittest.TestCase):
     # Проверяет, корректно ли функция возвращает ошибку при отрицательных значениях
-    # def testAreaRectangleNegative(self):
-    #     res = areaRectangle(-5, 4)
-    #     self.assertEqual(res, "Incorrect input")
+    def testAreaRectangleNegative(self):
+        res = areaRectangle(-5, 4)
+        self.assertEqual(res, "Incorrect input")
 
     # Проверяет, правильно ли функция возвращает 0, если одно из значений равно 0
     def testAreaRectangleZero(self):
@@ -26,9 +26,9 @@ class AreaRectangleTestCase(unittest.TestCase):
         self.assertEqual(res, 10)
 
     # Проверяет, выводит ли функция ошибку при передаче символа
-    # def testAreaRectangleChar(self):
-    #     res = areaRectangle('a', 3)
-    #     self.assertEqual(res, "Incorrect input")
+    def testAreaRectangleChar(self):
+        res = areaRectangle('a', 3)
+        self.assertEqual(res, "Incorrect input")
 
     # # Проверяет, выводит ли функция ошибку при передаче строки
     # def testAreaRectangleString(self):
@@ -36,9 +36,9 @@ class AreaRectangleTestCase(unittest.TestCase):
     #     self.assertEqual(res, "Incorrect input")
 
     # # Проверяет, выводит ли функция ошибку при передаче слишком большого числа
-    # def testAreaRectangleBigInteger(self):
-    #     res = areaRectangle(10000000000000000000000000000000000000000000000, 3)
-    #     self.assertEqual(res, "Incorrect input")
+    def testAreaRectangleBigInteger(self):
+        res = areaRectangle(10000000000000000000000000000000000000000000000, 3)
+        self.assertEqual(res, "Incorrect input")
 
 
 class PerimeterRectangleTestCase(unittest.TestCase):
